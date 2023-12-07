@@ -1,0 +1,33 @@
+{
+	"name": "skill_categories",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "uzletiintelligencia-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "skill_category.csv",
+				"fileSystem": "freelancerdotcom"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Skill",
+				"type": "String"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

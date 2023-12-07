@@ -1,0 +1,129 @@
+{
+	"name": "projects_aggregated_skills",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "uzletiintelligencia-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "projects_aggregated_skills.csv",
+				"fileSystem": "freelancerdotcom"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Link",
+				"type": "String"
+			},
+			{
+				"name": "Type",
+				"type": "String"
+			},
+			{
+				"name": "Hours_of_work_per_week",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Time_left",
+				"type": "String"
+			},
+			{
+				"name": "Num_of_bids",
+				"type": "String"
+			},
+			{
+				"name": "Average_bid",
+				"type": "String"
+			},
+			{
+				"name": "Budget",
+				"type": "String"
+			},
+			{
+				"name": "Budget_min",
+				"type": "String"
+			},
+			{
+				"name": "Budget_max",
+				"type": "String"
+			},
+			{
+				"name": "Currency",
+				"type": "String"
+			},
+			{
+				"name": "Employer_rating",
+				"type": "String"
+			},
+			{
+				"name": "Employer_location",
+				"type": "String"
+			},
+			{
+				"name": "Websites_IT_and_Software",
+				"type": "String"
+			},
+			{
+				"name": "Mobile_Phones_and_Computing",
+				"type": "String"
+			},
+			{
+				"name": "Writing_and_Content",
+				"type": "String"
+			},
+			{
+				"name": "Design_Media_and_Architecture",
+				"type": "String"
+			},
+			{
+				"name": "Data_Entry_and_Admin",
+				"type": "String"
+			},
+			{
+				"name": "Engineering_and_Science",
+				"type": "String"
+			},
+			{
+				"name": "Product_Sourcing_and_Manufacturing",
+				"type": "String"
+			},
+			{
+				"name": "Sales_and_Marketing",
+				"type": "String"
+			},
+			{
+				"name": "Freight_Shipping_and_Transportation",
+				"type": "String"
+			},
+			{
+				"name": "Business_Accounting_Human_Resources_and_Legal",
+				"type": "String"
+			},
+			{
+				"name": "Translation_and_Languages",
+				"type": "String"
+			},
+			{
+				"name": "Local_Jobs_and_Services",
+				"type": "String"
+			},
+			{
+				"name": "Other",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
