@@ -1,0 +1,588 @@
+{
+	"name": "humanfreedomindex",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "uzletiintelligencia-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "hfi_2022.csv",
+				"fileSystem": "countries"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "countries",
+				"type": "String"
+			},
+			{
+				"name": "region",
+				"type": "String"
+			},
+			{
+				"name": "hf_score",
+				"type": "String"
+			},
+			{
+				"name": "hf_rank",
+				"type": "String"
+			},
+			{
+				"name": "hf_quartile",
+				"type": "String"
+			},
+			{
+				"name": "pf_rol_procedural",
+				"type": "String"
+			},
+			{
+				"name": "pf_rol_civil",
+				"type": "String"
+			},
+			{
+				"name": "pf_rol_criminal",
+				"type": "String"
+			},
+			{
+				"name": "pf_rol_vdem",
+				"type": "String"
+			},
+			{
+				"name": "pf_rol",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_homicide",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_homicide_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_disap",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_violent",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_violent_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_organized",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_fatalities",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_fatalities_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_injuries",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_injuries_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances_torture",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_killings",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss_disappearances",
+				"type": "String"
+			},
+			{
+				"name": "pf_ss",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement_vdem_foreign",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement_vdem_men",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement_vdem_women",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement_vdem",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement_cld",
+				"type": "String"
+			},
+			{
+				"name": "pf_movement",
+				"type": "String"
+			},
+			{
+				"name": "pf_religion_freedom_vdem",
+				"type": "String"
+			},
+			{
+				"name": "pf_religion_freedom_cld",
+				"type": "String"
+			},
+			{
+				"name": "pf_religion_freedom",
+				"type": "String"
+			},
+			{
+				"name": "pf_religion_suppression",
+				"type": "String"
+			},
+			{
+				"name": "pf_religion",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_entry",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_freedom_house",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_freedom_bti",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_freedom_cld",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_freedom",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_parties_barriers",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_parties_bans",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_parties_auton",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_parties",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly_civil",
+				"type": "String"
+			},
+			{
+				"name": "pf_assembly",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_direct_killed",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_direct_killed_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_direct_jailed",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_direct_jailed_data",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_direct",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem_cultural",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem_harass",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem_gov",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem_internet",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem_selfcens",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_vdem",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_house",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_bti",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression_cld",
+				"type": "String"
+			},
+			{
+				"name": "pf_expression",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_same_m",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_same_f",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_same",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_divorce",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_inheritance_widows",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_inheritance_daughters",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_inheritance",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity_fgm",
+				"type": "String"
+			},
+			{
+				"name": "pf_identity",
+				"type": "String"
+			},
+			{
+				"name": "pf_score",
+				"type": "String"
+			},
+			{
+				"name": "pf_rank",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_consumption",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_consumption_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_transfers",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_transfers_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_investment",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_investment_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_tax_income",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_tax_income_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_tax_payroll",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_tax_payroll_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_tax",
+				"type": "String"
+			},
+			{
+				"name": "ef_government_soa",
+				"type": "String"
+			},
+			{
+				"name": "ef_government",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_judicial",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_courts",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_protection",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_military",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_integrity",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_enforcement",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_regulatory",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal_police",
+				"type": "String"
+			},
+			{
+				"name": "ef_gender",
+				"type": "String"
+			},
+			{
+				"name": "ef_legal",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_growth",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_growth_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_sd",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_sd_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_inflation",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_inflation_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_money_currency",
+				"type": "String"
+			},
+			{
+				"name": "ef_money",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_revenue",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_revenue_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_mean",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_mean_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_sd",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs_sd_data",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_tariffs",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_regulatory_nontariff",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_regulatory_compliance",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_regulatory",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_black",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_movement_open",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_movement_capital",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_movement_visit",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade_movement",
+				"type": "String"
+			},
+			{
+				"name": "ef_trade",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_credit_ownership",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_credit_private",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_credit_interest",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_credit",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_minwage",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_firing",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_bargain",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_hours",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_dismissal",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor_conscription",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_labor",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_adm",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_burden",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_start",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_impartial",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_licensing",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business_compliance",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation_business",
+				"type": "String"
+			},
+			{
+				"name": "ef_regulation",
+				"type": "String"
+			},
+			{
+				"name": "ef_score",
+				"type": "String"
+			},
+			{
+				"name": "ef_rank",
+				"type": "String"
+			}
+		]
+	}
+}
