@@ -342,7 +342,6 @@
 				"trim2 derive(Country = case(\r",
 				"    Country == 'Congo (Brazzaville)', 'Congo',\r",
 				"    Country == 'Hong Kong S.A.R., China', 'Hong Kong',\r",
-				"    Country == 'North Cyprus', 'Cyprus',\r",
 				"    Country == 'South Sudan', 'Sudan',\r",
 				"    Country == 'Taiwan Province of China', 'Taiwan',\r",
 				"    Country\r",
