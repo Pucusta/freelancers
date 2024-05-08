@@ -467,11 +467,13 @@
 				"          {Income composition of resources} as string,",
 				"          Schooling as string",
 				"     ),",
+				"     partitionFileNames:['countriesoutput'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink1"
 			]
 		}
 	}
