@@ -467,7 +467,7 @@
 				"          {Income composition of resources} as string,",
 				"          Schooling as string",
 				"     ),",
-				"     partitionFileNames:['countriesoutput'],",
+				"     partitionFileNames:['countriesoutput.csv'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
