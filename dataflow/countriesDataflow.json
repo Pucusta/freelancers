@@ -96,6 +96,12 @@
 				},
 				{
 					"name": "select5"
+				},
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "cast1"
 				}
 			],
 			"scriptLines": [
@@ -447,7 +453,31 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select5",
-				"select5 sink(allowSchemaDrift: true,",
+				"select5 derive({Pop. Density (per sq. mi.)} = replace({Pop. Density (per sq. mi.)}, ',', '.'),",
+				"          {Infant mortality (per 1000 births)} = replace({Infant mortality (per 1000 births)}, ',', '.'),",
+				"          {Literacy (%)} = replace({Literacy (%)}, ',', '.'),",
+				"          Birthrate = replace(Birthrate, ',', '.'),",
+				"          Deathrate = replace(Deathrate, ',', '.')) ~> derivedColumn1",
+				"derivedColumn1 cast(output(",
+				"          Country as string,",
+				"          Population as integer,",
+				"          {Pop. Density (per sq. mi.)} as double,",
+				"          {Infant mortality (per 1000 births)} as double,",
+				"          {GDP ($ per capita)} as double,",
+				"          {Literacy (%)} as double,",
+				"          Birthrate as double,",
+				"          Deathrate as double,",
+				"          {Happiness.Rank} as integer,",
+				"          {Happiness.Score} as double,",
+				"          hf_score as double,",
+				"          hf_rank as integer,",
+				"          Status as string,",
+				"          {Life expectancy } as double,",
+				"          {Income composition of resources} as double,",
+				"          Schooling as double",
+				"     ),",
+				"     errors: true) ~> cast1",
+				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          Country as string,",
