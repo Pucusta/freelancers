@@ -1,0 +1,88 @@
+{
+	"name": "countriesoutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "uzletiintelligencia-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output",
+				"fileSystem": "countries"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Population",
+				"type": "String"
+			},
+			{
+				"name": "Pop. Density (per sq. mi.)",
+				"type": "String"
+			},
+			{
+				"name": "Infant mortality (per 1000 births)",
+				"type": "String"
+			},
+			{
+				"name": "GDP ($ per capita)",
+				"type": "String"
+			},
+			{
+				"name": "Literacy (%)",
+				"type": "String"
+			},
+			{
+				"name": "Birthrate",
+				"type": "String"
+			},
+			{
+				"name": "Deathrate",
+				"type": "String"
+			},
+			{
+				"name": "Happiness.Rank",
+				"type": "String"
+			},
+			{
+				"name": "Happiness.Score",
+				"type": "String"
+			},
+			{
+				"name": "hf_score",
+				"type": "String"
+			},
+			{
+				"name": "hf_rank",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Life expectancy ",
+				"type": "String"
+			},
+			{
+				"name": "Income composition of resources",
+				"type": "String"
+			},
+			{
+				"name": "Schooling",
+				"type": "String"
+			}
+		]
+	}
+}
