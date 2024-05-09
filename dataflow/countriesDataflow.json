@@ -31,6 +31,13 @@
 						"type": "DatasetReference"
 					},
 					"name": "lifeexpectancy"
+				},
+				{
+					"dataset": {
+						"referenceName": "regions",
+						"type": "DatasetReference"
+					},
+					"name": "regions"
 				}
 			],
 			"sinks": [
@@ -102,6 +109,9 @@
 				},
 				{
 					"name": "cast1"
+				},
+				{
+					"name": "join4"
 				}
 			],
 			"scriptLines": [
@@ -320,6 +330,13 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> lifeexpectancy",
+				"source(output(",
+				"          Country as string,",
+				"          Region as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> regions",
 				"hfi filter(year == '2017') ~> filter1",
 				"lifeexpectancy filter(Year == '2015') ~> filter2",
 				"trim1 derive(Country = case(\r",
@@ -433,7 +450,7 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join3",
-				"join3 select(mapColumn(",
+				"join4 select(mapColumn(",
 				"          Country = select1@Country,",
 				"          Population,",
 				"          {Pop. Density (per sq. mi.)},",
@@ -449,7 +466,8 @@
 				"          Status,",
 				"          {Life expectancy },",
 				"          {Income composition of resources},",
-				"          Schooling",
+				"          Schooling,",
+				"          Region",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select5",
@@ -474,9 +492,15 @@
 				"          Status as string,",
 				"          {Life expectancy } as double,",
 				"          {Income composition of resources} as double,",
-				"          Schooling as double",
+				"          Schooling as double,",
+				"          Region as string",
 				"     ),",
 				"     errors: true) ~> cast1",
+				"join3, regions join(select1@Country == regions@Country,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join4",
 				"cast1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
