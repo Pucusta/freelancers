@@ -349,7 +349,7 @@
 				")) ~> countryNameFix2",
 				"trim3 derive(countries = case(\r",
 				"    countries == 'Brunei Darussalam', 'Brunei',\r",
-				"    countries == 'Congo, Dem. Rep.', 'Democratic Republic of Congo',\r",
+				"    countries == 'Congo, Dem. Rep.', 'Democratic Republic of the Congo',\r",
 				"    countries == 'Congo, Rep.', 'Republic of the Congo',\r",
 				"    countries == 'Egypt, Arab Rep.', 'Egypt',\r",
 				"    countries == 'Hong Kong SAR, China', 'Hong Kong',\r",
